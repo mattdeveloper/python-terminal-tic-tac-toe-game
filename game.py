@@ -1,3 +1,12 @@
+def print_board(board):
+    for row in board:
+        print("|" + "|".join(row) + "|")
+
+
+# Test the print_board function:
+# print_board([["X", "O", "X"], ["O", "X", "O"], ["X", "O", "X"]])
+
+
 def player_move(board, player):
     while True:
         try:
@@ -20,11 +29,6 @@ def player_move(board, player):
             )
         except IndexError:
             print("Invalid input. Row and column must be between 1 and 3.")
-
-
-def print_board(board):
-    for row in board:
-        print("|" + "|".join(row) + "|")
 
 
 def check_win(board):
